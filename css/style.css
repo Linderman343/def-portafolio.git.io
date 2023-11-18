@@ -73,7 +73,7 @@ h1{
 }
 
 
- img {
+ a>img {
     margin-left: 1%;
     width: 5%;
     background: #fff;
@@ -122,23 +122,13 @@ img:hover{
 }
 #informacion {
     overflow-y: scroll;
-    position: absolute;
+    position: absolute;     
     display: inline-block;
     transition: .7s;
     left: 330px;
     right: 10px;
-    height: 96vh;
+    height: 92vh;
     
-}
-h3{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #ab19ff; 
-    font-size: 35px;
-}
-p{
-    font-size: 20px;
-    margin-bottom: 60px;
 }
 .info-show{
     top: 70px;
@@ -153,43 +143,32 @@ p{
     width: 0;
 }
 
-
-/*
-*{
-    margin: 0;
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ab19ff; 
+    font-size: 35px;
 }
-#first-panel{
-    width: 100%;
-    padding-bottom: 20px ;
-    background: rgb(24, 24, 24);
+p{
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+#skills{
     text-align: center;
 }
-#prueba {
-    position: relative;
-    background-size: 100%;
-    border-radius: 50% ;
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 20px;
-}
-}
-h1{
-    position: relative;
-    color: #ab19ff;
-    margin-top: 30px;
+.lenguajes{
+    display: inline-block;
+    margin: 20px;
+    width: 70px;
     
 }
-
- img {
-    margin-top: 10px;
-    background: #fff;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    width: 25px;
+#img-proyect{
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
 }
-img:hover{
-    opacity: 59%;
+#img-proyect > img {
+    border-radius: 3%;
+    width: 90%;
 }
-*/
