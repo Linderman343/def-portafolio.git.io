@@ -1,6 +1,10 @@
 *{
     margin: 0;
 }
+body{
+    overflow-x: hidden;
+    height: 110vh;
+}
 #first-panel{
     position: sticky;
     top: 0;
@@ -116,10 +120,39 @@ img:hover{
     transform: rotateY(360deg);
     }
 }
-#informacion{
-    background: red;
-    width: 70%;
+#informacion {
+    overflow-y: scroll;
+    position: absolute;
+    display: inline-block;
+    transition: .7s;
+    left: 330px;
+    right: 10px;
+    height: 96vh;
+    
 }
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ab19ff; 
+    font-size: 35px;
+}
+p{
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+.info-show{
+    top: 70px;
+}
+.info-hidden{
+    top: 100px;
+    transform: translateX(110%);
+    opacity: 0;
+
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
 
 /*
 *{

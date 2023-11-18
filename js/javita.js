@@ -19,13 +19,16 @@ btn.addEventListener('click', e => {
 })
 
 ///scroll
+let info = document.querySelector('#informacion')
 let firstPanel = document.querySelector('#first-panel')
 window.addEventListener('scroll', e=>{
     ///Scroll 10
-    console.log(window.screenY)
+
     if (window.scrollY >= 10) {
         firstPanel.setAttribute('class','second')
+        info.setAttribute('class','info-show')
     } if (window.scrollY <= 9) {
         firstPanel.setAttribute('class','first')
+        info.setAttribute('class','info-hidden')
     }
 })
