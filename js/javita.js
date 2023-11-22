@@ -19,6 +19,7 @@ btn.addEventListener('click', e => {
 })
 
 ///scroll
+
 let info = document.querySelector('#informacion')
 let firstPanel = document.querySelector('#first-panel')
 window.addEventListener('scroll', e=>{
