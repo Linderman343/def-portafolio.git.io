@@ -26,8 +26,8 @@ body{
     height: 110vh;
 }
 #first-panel{
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top:0;
     height: 100vh;
     background: rgb(24, 24, 24);
     align-items: center;
@@ -144,8 +144,11 @@ h1{
     transition: .7s;
     left: 330px;
     right: 10px;
-    height: 92vh;
+    height: 100vh;
     
+}
+#informacion > div{
+    margin-bottom: 50px;
 }
 .info-show{
     top: 70px;
@@ -168,10 +171,8 @@ h3{
 }
 .description{
     font-size: 20px;
-    margin-bottom: 60px;
 }
 #skills{
-    margin-top: 30px;
     text-align: center;
 }
 .lenguajes{
