@@ -24,7 +24,7 @@ let info = document.querySelector('#informacion')
 let firstPanel = document.querySelector('#first-panel')
 window.addEventListener('scroll', e=>{
     ///Scroll 10
-
+    console.log(window.scrollY)
     if (window.scrollY >= 10) {
         firstPanel.setAttribute('class','second')
         info.setAttribute('class','info-show')
@@ -33,3 +33,4 @@ window.addEventListener('scroll', e=>{
         info.setAttribute('class','info-hidden')
     }
 })
+

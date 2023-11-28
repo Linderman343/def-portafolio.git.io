@@ -1,3 +1,9 @@
+/*  
+    ================
+    =====BASICO=====
+    ================
+*/
+
 @font-face {
     font-family: 'Fire code';
     src: url(../fuentes/static/FiraCode-Medium.ttf);
@@ -10,7 +16,16 @@
     font-weight: normal;
     font-style: normal;
 }
+
+*{
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+    height: 100vh;
+}
 h1, h2,h3,h4,h5{
+    color: #7209B7;
     font-family: 'Fire code';
     font-weight: bold;
 }
@@ -18,19 +33,13 @@ p{
     font-family: 'Fire code';
     font-weight: normal;
 }
-*{
-    margin: 0;
-}
-body{
-    overflow-x: hidden;
-    height: 110vh;
-}
 #first-panel{
+    height: 100vh;
     position: fixed;
     top:0;
-    height: 100vh;
-    background: rgb(24, 24, 24);
+    background: #120f13;
     align-items: center;
+    
 }
 
 .first{
@@ -47,12 +56,10 @@ body{
     position: absolute;
     background-size: 100%;
     border-radius: 50% ;
-    height: auto;
-    aspect-ratio: 1 / 1; 
-    
+    width: 450px;
+    height: 450px;
 }
 .first > #prueba {
-    width: 450px;
     left: 100px;
     top: 100px; 
 }
@@ -60,6 +67,7 @@ body{
     left: 15px;
     top: 20px;
     width: 270px;
+    height: 270px;
 
 }
 #info{
@@ -81,7 +89,6 @@ body{
 
 h1{
     transition: .7s;
-    color: #ab19ff
 }
 
 .first >#info > h1{
@@ -166,7 +173,6 @@ h1{
 h3{
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #ab19ff; 
     font-size: 35px;
 }
 .description{
@@ -188,7 +194,6 @@ h3{
     column-gap: 35px;
 }
 .proyecto{
-    background-color: hsl(66, 100%, 50%);
     position: relative;
     text-align: center;
 
@@ -212,11 +217,194 @@ h3{
     font-size: 1.2vw;
     margin-top: 10px;
     text-align: center;
-    color: #fff;
+    color: #7209B7;
     bottom: 0;
 
 }
 .descriptionP p{
     font-size: 1.0vw;
-    color: #ffffffb6;
+    color: #B68CB8;
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
+    #first-panel{
+        position: fixed;
+        top: 10px;
+        left: 0;
+        background: blue;
+        width: 100vw;
+        height: 80px;
+        align-items: center;
+        z-index: 999;
+    
+    }  
+    #prueba{
+        transition: .7s;
+        position: absolute;
+        background-size: 100%;
+        border-radius: 50% ;
+        height: 70px;
+        width: 70px;
+        top: 0;
+    }
+    #info{
+        transition: .7s;
+        position: absolute;
+        text-align: center;
+        
+    }
+    .first > #info{
+        width: 500px;
+        left: 630px;
+        top: 300px;
+    }
+    .second > #info{
+        left: 0;
+        width: 300px;
+        top: 300px;
+    }
+    
+    h1{
+        transition: .7s;
+    }
+    
+    .first >#info > h1{
+        font-size:50px;
+    }
+    .second >#info > h1{
+        font-size:30px;
+        
+    }
+    
+    
+     a>img {
+        margin-left: 1%;
+        width: 5%;
+        background: #fff;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+    
+    .nor{
+        background-image: url("../img/selfie.jpeg");
+    }
+    .normal{
+        animation: realista .7s;
+        background-image: url("../img/selfie.jpeg");
+    }
+    .pixel{
+        animation: pixelado .7s;
+        background-image: url("../img/selfie-pixel.png");
+    }
+    
+    @keyframes pixelado { 
+        0%{
+            background-image: url("../img/selfie.jpeg");
+        }
+        70%{
+        
+            background-image: url("../img/selfie-pixel.png");
+        }
+        100%{
+        transform: rotateY(360deg);
+        }
+    }
+    @keyframes realista {
+        0%{
+            background-image: url("../img/selfie-pixel.png");
+        }
+    
+        70%{
+            background-image: url("../img/selfie.jpeg");
+        }
+        100%{
+        transform: rotateY(360deg);
+        }
+    }
+    #informacion {
+        overflow-y: scroll;
+        position: absolute;     
+        display: inline-block;
+        transition: .7s;
+        left: 330px;
+        right: 10px;
+        height: 100vh;
+        
+    }
+    #informacion > div{
+        margin-bottom: 50px;
+    }
+    .info-show{
+        top: 70px;
+    }
+    .info-hidden{
+        top: 100px;
+        transform: translateX(110%);
+        opacity: 0;
+    
+    }
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    h3{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+    .description{
+        font-size: 20px;
+    }
+    #skills{
+        text-align: center;
+    }
+    .lenguajes{
+        display: inline-block;
+        margin-left: 20px;
+        width: 70px;
+        
+    }
+    
+    #img-proyect{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 35px;
+    }
+    .proyecto{
+        position: relative;
+        text-align: center;
+    
+    }
+    .proyecto > img {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;   
+    }
+    
+    .descriptionP{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 5vw;
+        background: #000000d3;
+        bottom: 0;
+    }
+    .titleP {
+        font-size: 1.2vw;
+        margin-top: 10px;
+        text-align: center;
+        color: #7209B7;
+        bottom: 0;
+    
+    }
+    .descriptionP p{
+        font-size: 1.0vw;
+        color: #B68CB8;
+    }
+    
+
 }
