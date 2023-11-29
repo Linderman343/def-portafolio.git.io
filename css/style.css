@@ -3,7 +3,6 @@
     =====BASICO=====
     ================
 */
-
 @font-face {
     font-family: 'Fire code';
     src: url(../fuentes/static/FiraCode-Medium.ttf);
@@ -34,80 +33,21 @@ p{
     font-weight: normal;
 }
 #first-panel{
-    height: 100vh;
     position: fixed;
     top:0;
     background: #120f13;
-    align-items: center;
-    
 }
-
-.first{
-    width: 100%;
-    transition: .7s;
-}
-.second{
-    width: 300px;
-    transition: .7s;
-}
-
 #prueba{
     transition: .7s;
-    position: absolute;
     background-size: 100%;
     border-radius: 50% ;
-    width: 450px;
-    height: 450px;
-}
-.first > #prueba {
-    left: 100px;
-    top: 100px; 
-}
-.second > #prueba{
-    left: 15px;
-    top: 20px;
-    width: 270px;
-    height: 270px;
-
-}
-#info{
-    transition: .7s;
-    position: absolute;
-    text-align: center;
-    
-}
-.first > #info{
-    width: 500px;
-    left: 630px;
-    top: 300px;
-}
-.second > #info{
-    left: 0;
-    width: 300px;
-    top: 300px;
 }
 
-h1{
-    transition: .7s;
-}
-
-.first >#info > h1{
-    font-size:50px;
-}
-.second >#info > h1{
-    font-size:30px;
-    
-}
-
-
- a>img {
-    margin-left: 1%;
-    width: 5%;
+a>img{
     background: #fff;
     border: 3px solid #fff;
     border-radius: 50%;
 }
-
 .nor{
     background-image: url("../img/selfie.jpeg");
 }
@@ -143,112 +83,50 @@ h1{
     100%{
     transform: rotateY(360deg);
     }
-}
-#informacion {
-    overflow-y: scroll;
-    position: absolute;     
-    display: inline-block;
-    transition: .7s;
-    left: 330px;
-    right: 10px;
-    height: 100vh;
     
 }
-#informacion > div{
-    margin-bottom: 50px;
-}
-.info-show{
-    top: 70px;
-}
-.info-hidden{
-    top: 100px;
-    transform: translateX(110%);
-    opacity: 0;
-
-}
-::-webkit-scrollbar {
-    width: 0;
-}
-
-h3{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 35px;
-}
-.description{
-    font-size: 20px;
+.descriptionP p{
+    color: #B68CB8;
+}  
+.titleP{
+    text-align: center;
+    color: #7209B7;
+    bottom: 0;
 }
 #skills{
     text-align: center;
 }
-.lenguajes{
-    display: inline-block;
-    margin-left: 20px;
-    width: 70px;
-    
-}
-
-#img-proyect{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 35px;
-}
-.proyecto{
-    position: relative;
-    text-align: center;
-
-}
-.proyecto > img {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;   
-}
-
-.descriptionP{
-    z-index: 5;
-    position: absolute;
-    width: 100%;
-    height: 5vw;
-    background: #000000d3;
-    bottom: 0;
-}
-.titleP {
-    font-size: 1.2vw;
-    margin-top: 10px;
-    text-align: center;
-    color: #7209B7;
-    bottom: 0;
-
-}
-.descriptionP p{
-    font-size: 1.0vw;
-    color: #B68CB8;
-}
-
-@media screen and (max-width: 480px) {
-    body{
-        overflow-x: hidden;
-    }
+@media screen and (min-width: 481px) {
+   
     #first-panel{
-        position: fixed;
-        top: 10px;
-        left: 0;
-        background: blue;
-        width: 100vw;
-        height: 80px;
+        height: 100vh;
         align-items: center;
-        z-index: 999;
+    }
     
-    }  
-    #prueba{
+    .first{
+        width: 100%;
         transition: .7s;
+    }
+    .second{
+        width: 300px;
+        transition: .7s;
+    }
+    
+    #prueba{
         position: absolute;
-        background-size: 100%;
-        border-radius: 50% ;
-        height: 70px;
-        width: 70px;
-        top: 0;
+        width: 450px;
+        height: 450px;
+    }
+    .first > #prueba {
+        left: 100px;
+        top: 100px; 
+    }
+    .second > #prueba{
+        left: 15px;
+        top: 20px;
+        width: 270px;
+        height: 270px;
+    
     }
     #info{
         transition: .7s;
@@ -283,46 +161,6 @@ h3{
      a>img {
         margin-left: 1%;
         width: 5%;
-        background: #fff;
-        border: 3px solid #fff;
-        border-radius: 50%;
-    }
-    
-    .nor{
-        background-image: url("../img/selfie.jpeg");
-    }
-    .normal{
-        animation: realista .7s;
-        background-image: url("../img/selfie.jpeg");
-    }
-    .pixel{
-        animation: pixelado .7s;
-        background-image: url("../img/selfie-pixel.png");
-    }
-    
-    @keyframes pixelado { 
-        0%{
-            background-image: url("../img/selfie.jpeg");
-        }
-        70%{
-        
-            background-image: url("../img/selfie-pixel.png");
-        }
-        100%{
-        transform: rotateY(360deg);
-        }
-    }
-    @keyframes realista {
-        0%{
-            background-image: url("../img/selfie-pixel.png");
-        }
-    
-        70%{
-            background-image: url("../img/selfie.jpeg");
-        }
-        100%{
-        transform: rotateY(360deg);
-        }
     }
     #informacion {
         overflow-y: scroll;
@@ -396,15 +234,113 @@ h3{
     .titleP {
         font-size: 1.2vw;
         margin-top: 10px;
-        text-align: center;
-        color: #7209B7;
-        bottom: 0;
-    
     }
     .descriptionP p{
         font-size: 1.0vw;
-        color: #B68CB8;
+    }
+     
+}
+
+
+@media screen and (max-width: 480px) {
+    #first-panel{
+        z-index: 1000;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        top: 0;
+        width: 100vw;
+        height: 30vw;
+        
     }
     
-
+    #first-panel>div{
+        display: inline-block;
+    }
+    #prueba{
+        margin-left: 10px;
+        width: 20vw;
+        height: 20vw;
+    }
+    #info{
+        margin-left: 3vw;
+    }
+    #redes{
+        display: none;
+    }
+    h1{
+        position: relative;
+        font-size: 7vw;
+    } 
+    a>img {
+        margin-left: 1%;
+        width: 7%;
+    }
+    #informacion { 
+        margin-top: 32vw ;
+        margin-right: 3vw;
+    }
+    #informacion > div{
+        margin-bottom: 30px;
+    }
+    h3{
+        margin-left: 3vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+    p{
+        margin-left: 3vw;
+    }
+    .description{
+        font-size: 15px;
+    }
+    
+    .lenguajes{
+        display: inline-block;
+        margin-left: 20px;
+        width: 70px;
+        
+    }
+    #proyectos{
+        width: 100vw;
+    }
+    #img-proyect{
+        margin-right: 10px;
+        overflow-x: auto;
+        overflow-y:hidden;
+        white-space: nowrap;
+        z-index: 1;
+    }
+    
+    .proyecto{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        width: 70vw;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    
+    }
+    .proyecto > img {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;   
+    }
+    
+    .descriptionP{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 12vw;
+        background: #000000d3;
+        bottom: 0;
+    }
+    .titleP {
+        font-size: 5vw;
+    }
+    .descriptionP > p{
+        display: none;
+    }
 }
